@@ -30,7 +30,7 @@
         }),
         methods: {
             getFruits(){
-                api.get('/api/auth/fruits').then(res => {
+                api.get('/api/fruits').then(res => {
                     this.fruits = res.data.data;
                 })
             },

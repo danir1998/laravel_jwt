@@ -27,18 +27,18 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 
-    Route::group(['middleware' => 'jwt.auth'], function(){
-        Route::group(['namespace' => 'Fruit', 'prefix' => 'fruits'], function () {
-            Route::get('/', 'IndexController');
-        });
-    });
-
 });
 
 Route::group(['namespace' => 'User', 'prefix' => 'users'], function () {
     Route::post('/', 'StoreController');
 });
 
+
+Route::group(['middleware' => 'jwt.auth'], function(){
+    Route::group(['namespace' => 'Fruit', 'prefix' => 'fruits'], function () {
+        Route::get('/', 'IndexController');
+    });
+});
 
 
 
