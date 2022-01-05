@@ -12,8 +12,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+## Установка JWT Tymon 
+https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
 
 ## Установка
+Создать database.sqlite в /database/
+прописать DB_CONNECTION=sqlite в .env
+
 ```ch
 composer install
 npm install
