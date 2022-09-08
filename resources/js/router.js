@@ -7,6 +7,9 @@ let router = new VueRouter({
     mode: "history",
     routes: [
         {
+            path: '/map', component: () => import('./components/Map/Index'), name: 'map'
+        },
+        {
             path: '/fruits', component: () => import('./components/Fruit/Index'), name: 'fruit.index',
         },
         {
@@ -18,9 +21,9 @@ let router = new VueRouter({
         {
             path: '/user/personal', component: () => import('./components/User/Personal'), name: 'user.personal',
         },
-        {
-            path: '*',  component: () => import('./components/User/Personal'), name: '404',
-        }
+        // {
+        //     path: '*',  component: () => import('./components/User/Personal'), name: '404',
+        // }
     ]
 })
 

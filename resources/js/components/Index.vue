@@ -1,6 +1,7 @@
 <template>
     <div>
         <router-link :to="{name: 'fruit.index'}">List</router-link>
+        <router-link :to="{name: 'map'}">Map</router-link>
         <router-link v-if="!token" :to="{name: 'user.login'}">Login</router-link>
         <router-link v-if="!token" :to="{name: 'user.registration'}">Registration</router-link>
         <router-link v-if="token" :to="{name: 'user.personal'}">Personal</router-link>
