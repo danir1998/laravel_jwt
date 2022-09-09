@@ -7,19 +7,19 @@ let router = new VueRouter({
     mode: "history",
     routes: [
         {
-            path: '/fruits', component: () => import('./components/Fruit/Index'), name: 'fruit.index',
+            path: '/fruits', component: () => import('./components/Fruit/Index'), name: 'fruit.index', meta: { transition: 'slide-left' },
         },
         {
-            path: '/user/login', component: () => import('./components/User/Login'), name: 'user.login',
+            path: '/user/login', component: () => import('./components/User/Login'), name: 'user.login',meta: { transition: 'slide-left' },
         },
         {
-            path: '/user/registration', component: () => import('./components/User/Registration'), name: 'user.registration',
+            path: '/user/registration', component: () => import('./components/User/Registration'), name: 'user.registration',meta: { transition: 'slide-left' },
         },
         {
-            path: '/user/personal', component: () => import('./components/User/Personal'), name: 'user.personal',
+            path: '/user/personal', component: () => import('./components/User/Personal'), name: 'user.personal',meta: { transition: 'slide-left' },
         },
         {
-            path: '*',  component: () => import('./components/User/Personal'), name: '404',
+            path: '*',  component: () => import('./components/NotFound'), name: '404',meta: { transition: 'slide-left' },
         }
     ]
 })

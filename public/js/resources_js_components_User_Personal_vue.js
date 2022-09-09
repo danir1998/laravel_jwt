@@ -17,8 +17,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Personal"
+  name: "Personal",
+  mounted: function mounted() {
+    var latlngs = [[45.51, -122.68], [37.77, -122.43], [34.04, -118.2]];
+    var mymap = L.map('mapid', {
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: 'topleft'
+      }
+    });
+    var lc = L.control.locate({
+      position: 'topright',
+      strings: {
+        title: "Show me where I am, yo!"
+      }
+    }).addTo(mymap); // request location update and set location
+    // lc.start();
+
+    var icon = new L.Icon.Default();
+    icon.options.shadowSize = [0, 0];
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      // attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(mymap);
+    var polyline = L.polyline(latlngs, {
+      color: 'green'
+    }).addTo(mymap);
+    mymap.setView(new L.LatLng(54.8618, 53.0719), 14);
+  }
 });
 
 /***/ }),
@@ -107,9 +142,26 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Personal\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content" }, [
+      _c("div", { staticClass: "grid grid-cols-12 gap-1" }, [
+        _c("div", { staticClass: "col-span-3" }, [_c("h1", [_vm._v("asdsa")])]),
+        _vm._v(" "),
+        _c("div", {
+          staticClass: "col-span-9 center-block",
+          staticStyle: { height: "calc(100vh - 52px)" },
+          attrs: { id: "mapid" },
+        }),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 

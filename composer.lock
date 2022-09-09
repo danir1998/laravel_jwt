@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10e06f47f1c8b775ae8c13082d5393af",
+    "content-hash": "e937b2af450fefb40f5e7383d9fa1447",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -962,6 +962,51 @@
                 }
             ],
             "time": "2021-10-06T17:43:30+00:00"
+        },
+        {
+            "name": "itpanda-llc/yandex-speechkit-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itpanda-llc/yandex-speechkit-sdk.git",
+                "reference": "f6982958a74d7da761d826017eeabd86b84d9d5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itpanda-llc/yandex-speechkit-sdk/zipball/f6982958a74d7da761d826017eeabd86b84d9d5c",
+                "reference": "f6982958a74d7da761d826017eeabd86b84d9d5c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Panda\\Yandex\\SpeechKitSdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "itpanda-llc",
+                    "homepage": "https://github.com/itpanda-llc"
+                }
+            ],
+            "description": "Library for integration with the Yandex SpeechKit speech technology service",
+            "homepage": "https://github.com/itpanda-llc/yandex-speechkit-sdk",
+            "support": {
+                "issues": "https://github.com/itpanda-llc/yandex-speechkit-sdk/issues",
+                "source": "https://github.com/itpanda-llc/yandex-speechkit-sdk/tree/master"
+            },
+            "time": "2021-05-16T05:49:45+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8238,12 +8283,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "itpanda-llc/yandex-speechkit-sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }

@@ -22,6 +22,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
@@ -137,68 +162,120 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-25" }, [
-    _c("input", {
-      directives: [
+  return _c(
+    "div",
+    {
+      staticClass:
+        "content flex align-items-center h-100 justify-content-center",
+    },
+    [
+      _c(
+        "form",
         {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.email,
-          expression: "email",
+          staticClass:
+            "w-25 gap-1 bg-white p-5 m-1 shadow-lg border border-gray-200 rounded-2",
         },
-      ],
-      staticClass: "form-control",
-      attrs: { type: "email", placeholder: "Email" },
-      domProps: { value: _vm.email },
-      on: {
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.email = $event.target.value
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.password,
-          expression: "password",
-        },
-      ],
-      staticClass: "form-control",
-      attrs: { type: "password", placeholder: "Password" },
-      domProps: { value: _vm.password },
-      on: {
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.password = $event.target.value
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c("input", {
-      staticClass: "btn btn-primary",
-      attrs: { type: "submit", value: "Войти" },
-      on: {
-        click: function ($event) {
-          $event.preventDefault()
-          return _vm.login.apply(null, arguments)
-        },
-      },
-    }),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "text-danger" }, [
-          _vm._v("\n        " + _vm._s(this.error) + "\n    "),
-        ])
-      : _vm._e(),
-  ])
+        [
+          _c("div", { staticClass: "mb-3" }, [
+            _c(
+              "label",
+              {
+                staticClass: "form-label",
+                attrs: { for: "exampleInputEmail1" },
+              },
+              [_vm._v("Email address")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                id: "exampleInputEmail1",
+                "aria-describedby": "emailHelp",
+              },
+              domProps: { value: _vm.email },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "form-text", attrs: { id: "emailHelp" } },
+              [_vm._v("We'll never share your email with anyone else.")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-3" }, [
+            _c(
+              "label",
+              {
+                staticClass: "form-label",
+                attrs: { for: "exampleInputPassword1" },
+              },
+              [_vm._v("Password")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password,
+                  expression: "password",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "password", id: "exampleInputPassword1" },
+              domProps: { value: _vm.password },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { type: "submit" },
+              on: {
+                click: function ($event) {
+                  $event.preventDefault()
+                  return _vm.login.apply(null, arguments)
+                },
+              },
+            },
+            [_vm._v("Войти")]
+          ),
+          _vm._v(" "),
+          _vm.error
+            ? _c("div", { staticClass: "text-danger" }, [
+                _c("p", [_vm._v(_vm._s(this.error))]),
+              ])
+            : _vm._e(),
+        ]
+      ),
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

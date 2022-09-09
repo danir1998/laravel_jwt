@@ -34,6 +34,8 @@ Route::group(['namespace' => 'User', 'prefix' => 'users'], function () {
 });
 
 
+Route::get('/test', 'TestController@index');
+
 Route::group(['middleware' => 'jwt.auth'], function(){
     Route::group(['namespace' => 'Fruit', 'prefix' => 'fruits'], function () {
         Route::get('/', 'IndexController');
